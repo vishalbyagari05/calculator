@@ -1,0 +1,18 @@
+trigger:
+- main
+"Hello_World"
+pool: 
+  vmImage: ubuntu-latest
+
+stages:
+- stage: CI
+  jobs:
+  - job: CIWork
+    steps:
+    - script: "Do CI work"
+
+- stage: Test
+  jobs:
+  - job: TestWork
+    steps:
+    - script: "Do test work"
